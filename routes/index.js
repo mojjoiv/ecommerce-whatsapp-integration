@@ -15,7 +15,7 @@ const CustomerSession = new Map();
 
 router.get('/meta_wa_callbackurl', (req, res) => {
     try {
-        console.log('GET: I am calling you');
+        console.log('GET: Someone is pinging me!');
 
         let mode = req.query['hub.mode'];
         let token = req.query['hub.verify_token'];
@@ -38,7 +38,7 @@ router.get('/meta_wa_callbackurl', (req, res) => {
 });
 
 router.post('/meta_wa_callbackurl', async (req, res) => {
-    console.log('POST: I am being called');
+    console.log('POST: Someone is pinging me!');
     try {
         let data = Whatsapp.parseMessage(req.body);
 
@@ -186,7 +186,7 @@ router.post('/meta_wa_callbackurl', async (req, res) => {
                                     phone: '+1 (555) 025-3483',
                                 },
                                 {
-                                    phone: '+254 707903355',
+                                    phone: '+254 712345678',
                                 },
                             ],
                         },
